@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F1F1F1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewMemberController">
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" text="Add New Member" textFill="#4d090a" style="-fx-font-size: 24px;">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <JFXTextField fx:id="memberIdField" layoutX="150.0" layoutY="70.0" promptText="Member ID" />
+        <Label layoutX="20.0" layoutY="75.0" text="Member ID:" />
+
+        <JFXComboBox fx:id="memberCategoryCombo" layoutX="150.0" layoutY="110.0" promptText="Select Category">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Student" />
+                    <String fx:value="Faculty" />
+                    <String fx:value="Staff" />
+                </FXCollections>
+            </items>
+        </JFXComboBox>
+        <Label layoutX="20.0" layoutY="115.0" text="Member Category:" />
+
+        <JFXTextField fx:id="memberNameField" layoutX="150.0" layoutY="150.0" promptText="Member Name" />
+        <Label layoutX="20.0" layoutY="155.0" text="Member Name:" />
+
+        <JFXTextField fx:id="memberNicField" layoutX="150.0" layoutY="190.0" promptText="NIC Number" />
+        <Label layoutX="20.0" layoutY="195.0" text="Member NIC No:" />
+
+        <JFXTextArea fx:id="memberAddressArea" layoutX="150.0" layoutY="230.0" prefHeight="60.0" prefWidth="200.0" promptText="Address" />
+        <Label layoutX="20.0" layoutY="235.0" text="Member Address:" />
+
+        <Label layoutX="20.0" layoutY="310.0" text="Gender:" />
+        <JFXRadioButton fx:id="genderMale" layoutX="150.0" layoutY="310.0" text="Male" />
+        <JFXRadioButton fx:id="genderFemale" layoutX="220.0" layoutY="310.0" text="Female" />
+        <JFXRadioButton fx:id="genderOther" layoutX="290.0" layoutY="310.0" text="Other" />
+        <ToggleGroup fx:id="genderGroup">
+            <toggles>
+                <JFXRadioButton fx:reference="genderMale" />
+                <JFXRadioButton fx:reference="genderFemale" />
+                <JFXRadioButton fx:reference="genderOther" />
+            </toggles>
+        </ToggleGroup>
+
+        <JFXTextField fx:id="contactNumberField" layoutX="150.0" layoutY="350.0" promptText="Contact Number" />
+        <Label layoutX="20.0" layoutY="355.0" text="Contact Number:" />
+
+        <JFXTextField fx:id="emailAddressField" layoutX="150.0" layoutY="390.0" promptText="Email Address" />
+        <Label layoutX="20.0" layoutY="395.0" text="Email Address:" />
+
+        <JFXDatePicker fx:id="membershipStartDatePicker" layoutX="150.0" layoutY="430.0" promptText="Start Date" />
+        <Label layoutX="20.0" layoutY="435.0" text="Membership Start Date:" />
+
+        <JFXDatePicker fx:id="membershipExpiryDatePicker" layoutX="150.0" layoutY="470.0" promptText="Expiry Date" />
+        <Label layoutX="20.0" layoutY="475.0" text="Membership Expiry Date:" />
+
+        <JFXButton layoutX="150.0" layoutY="520.0" text="Save" style="-fx-background-color: #4fbf55;" />
+        <JFXButton layoutX="250.0" layoutY="520.0" text="Cancel" style="-fx-background-color: #ce6846;" />
+    </children>
+</AnchorPane>
